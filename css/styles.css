@@ -37,6 +37,10 @@ body {
   color: var(--accent-color);
 }
 
+.nav-list .link.current {
+  color: var(--accent-color);
+}
+
 /* List */
 
 .list {
@@ -138,20 +142,28 @@ body {
   margin-right: auto;
   width: 216px;
   height: 50px;
+  border-radius: 4px;
 
+  font-family: "Roboto";
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.06em;
   color: #ffffff;
   background: #2196f3;
+  border-color: #2196f3;
+  border-style: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Section */
 
 .section .section-title {
+  margin-top: 0;
+
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.17px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
 
@@ -160,9 +172,16 @@ body {
 /* benefits */
 
 .visually-hidden {
-  visibility: hidden;
-  margin: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
   padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .benefits-list {
@@ -195,11 +214,23 @@ body {
   color: #757575;
 }
 
-.benefits-list:not(:last-child){
+.benefits-list .item {
+  width: 270px;
+}
+
+.benefits-list .item:not(:last-child) {
   margin-right: 30px;
 }
 
 /*Employment */
+
+.employment {
+  margin-bottom: 94px;
+}
+
+.employment .section-title {
+  margin-bottom: 50px;
+}
 
 .employment .list {
   width: 1200px;
@@ -209,17 +240,17 @@ body {
   margin-right: auto;
 
   display: flex;
-}
-
-/* .images-list .item{
-  width: 370px;
-} */
-
-.images-list .item :not(:last-child) {
-  margin-right: 30px;
+  justify-content: space-between;
 }
 
 /* team */
+
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  background-color: #f5f4fa;
+}
 
 .team-list {
   width: 1200px;
@@ -227,8 +258,10 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 94px;
 
   display: flex;
+  justify-content: space-between;
 }
 
 .team-list .title {
@@ -239,6 +272,10 @@ body {
   letter-spacing: 0.03em;
 
   color: #212121;
+}
+
+.team-list .item {
+  width: 270px;
 }
 
 .team-list .text {
@@ -254,10 +291,15 @@ body {
 /* footer */
 
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background: #2f303a;
+  width: 1170;
 }
 
 .footer .logo {
+  margin-bottom: 20px;
+
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
@@ -269,23 +311,24 @@ body {
 }
 
 .address-list .link {
+  
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-
   letter-spacing: 0.03em;
 
   color: #ffffff;
 }
 
 .address-list .contact {
+  text-decoration: none;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
+  display: block;
   color: rgba(255, 255, 255, 0.6);
 }
 
